@@ -38,7 +38,7 @@ This is a model of a small neural net. The inputs are traditionally on the left,
 
 ## The model learns deceptively fast early on
 
-![a](img/mean_absolute_error.png)<!--width="90%"-->
+![a](img/mean_absolute_error_tr.png)<!--width="90%"-->
 
 --{{0}}--
 A logarithmic curve on a logarithmic axis!<br/>The gain in accuracy is massive early on, but to get under a define error threshold, thousand, maybe hundreds of thousands of data points are required. Each new one has diminishing returns as more are being fed into the model.
@@ -81,7 +81,6 @@ Questions.
 ## Resources
 * [Moore's Law](#Moores-Law)<br/>
 * [Parameters](#Parameters)<br/>
-* [Laminar Flow](#Formula)<br/>
 * [Three Bodies](#Three-Bodies)<br/>
 * [Heart Valves](#Heart-Valves)
 ### Moores Law
@@ -90,9 +89,6 @@ Questions.
 ### Parameters
 [back](#Resources)<br/>
 ![a](img/parameters.png)<!--width="90%"-->
-### Formula
-[back](#Resources)<br/>
-![a](img/speed_laminar_flow.png)<!--width="90%"-->
 ### Three Bodies
 [back](#Resources)<br/>
 ![a](img/three_bodies_tr.PNG)<!--width="90%"-->
