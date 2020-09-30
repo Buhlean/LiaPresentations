@@ -10,12 +10,22 @@ import: https://raw.githubusercontent.com/Buhlean/LiaTranscriptLiveEdit/master/M
                 margin-left: 2px; color: #444; font-size: 0.8em; ">@3</label>
 </div>
 @end
+
 @big_helper
 <div style=" height: auto;  margin: 4px; ">
   <label style="display: inline-block; width: 70px; vertical-align: top; ">@0</label>
   <textarea name="@0" style="width: @1px; height: @2px;">@3</textarea>
   <label style="display: inline-block; vertical-align: bottom; 
                 margin-left: 2px; color: #444; font-size: 0.8em; ">@4</label>
+</div>
+@end
+
+@weird_helper
+<div style=" height: auto;  margin: 4px; ">
+  <input style="display: inline-block; width: 70px; "/>
+  <input type="text" value="@2" style="width: @1px;"/>
+  <label style="display: inline-block; vertical-align: bottom; 
+                margin-left: 2px; color: #444; font-size: 0.8em; ">@3</label>
 </div>
 @end
 @br: <div style="height:4px;"></div>
@@ -86,12 +96,15 @@ Contents:</p>
 ### Reference
 \*to do\*
 ### Elevator Mock-Up 1
-![warming graph](https://upload.wikimedia.org/wikipedia/commons/4/4e/NASA-GISTEMP-Hemispheres.svg) <!-- width="500px" -->
+![warming graph](https://upload.wikimedia.org/wikipedia/commons/4/4e/NASA-GISTEMP-Hemispheres.svg) <!-- style="width:500px;border:solid grey 1px;" -->
+
+~~Describe the graph above:~~ <!-- style="font-size:1.3em;" -->
 <div>
+@br
 @elev_helper(x-axis:, 120, year, ~1s)
 @elev_helper( , 300, timespan from 1880-2020, ~8s)
 @br
-@elev_helper(y-axis:, 120, temperature, ~2s)
+@elev_helper(y-axis:, 120, temperature in °C, ~3s)
 @elev_helper( , 300, temperature anomaly between -0.5 and +1.5, ~18s)
 @br
 @elev_helper(Legend:, 360, mean values for northern and southern hemisphere, ~12s)
@@ -104,7 +117,7 @@ Contents:</p>
 </div>
 ### Elevator Mock-Up 2
 ``` C
-bubbleSort2(Array A)
+function(Array A)
   n = A.size
   do{
     swapped = false
@@ -117,8 +130,9 @@ bubbleSort2(Array A)
     n = n-1
   } while (swapped)
 ```
-
+~~Describe the code above:~~ <!-- style="font-size:1.3em;" -->
 <div>
+@br
 @elev_helper(goal:, 120, sort, ~1s)
 @elev_helper( , 300, fully sort an array in ascending order, ~8s)
 @br
@@ -128,8 +142,27 @@ bubbleSort2(Array A)
 @elev_helper(how?, 360, compares and swaps, ~12s)
 @elev_helper( , 800, nested twice walks across and swaps the highest number to the top, ~0s)
 @br
-@elev_helper(Explain:, 250, Low on the left. high on the right!, ~5s)
-@elev_helper( , 1000, , ~0s)
+@elev_helper(Explain:, 250, It's the fizzy version of tap water sort., ~5s)
+@elev_helper( , 1000, Modified Bubblesort to enable it to stop when finished early with the 'swapped' control variable, ~0s)
+</div>
+### weird idea
+![warming graph](https://colorlib.com/wp/wp-content/uploads/sites/2/jquery-file-upload-scripts.png) <!-- style="width:500px;" -->
+
+~~Describe:~~ <!-- style="font-size:1.3em;" -->
+<div>
+@br
+@weird_helper( , 120,  , ~0s)
+@weird_helper( , 300,  , ~0s)
+@br
+@weird_helper( , 120,  , ~0s)
+@weird_helper( , 300,  , ~0s)
+@br
+@weird_helper( , 360,  , ~0s)
+@weird_helper( , 800, , ~0s)
+@br
+@weird_helper( , 250,  , ~0s)
+@weird_helper( , 1000, , ~0s)
+@big_helper( , 1000, 100,  , ~0s)
 </div>
 
 
