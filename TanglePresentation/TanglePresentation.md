@@ -5,6 +5,7 @@ import: https://raw.githubusercontent.com/Buhlean/LiaTranscriptLiveEdit/master/M
 @elev_helper
 <div style=" height: auto;  margin: 4px; ">
   <label style="display: inline-block; width: 70px; vertical-align: top; ">@0</label>
+  <input style="text" value=" " style="width: 14px;height: 14px"/>
   <input type="text" value="@2" style="width: @1px;"/>
   <label style="display: inline-block; vertical-align: bottom; 
                 margin-left: 2px; color: #444; font-size: 0.8em; ">@3</label>
@@ -14,6 +15,7 @@ import: https://raw.githubusercontent.com/Buhlean/LiaTranscriptLiveEdit/master/M
 @big_helper
 <div style=" height: auto;  margin: 4px; ">
   <label style="display: inline-block; width: 70px; vertical-align: top; ">@0</label>
+  <input style="text" value=" " style="width: 14px;height: 14px; vertical-align:top;margin-top: 4px;"/>
   <textarea name="@0" style="width: @1px; height: @2px;">@3</textarea>
   <label style="display: inline-block; vertical-align: bottom; 
                 margin-left: 2px; color: #444; font-size: 0.8em; ">@4</label>
@@ -23,6 +25,7 @@ import: https://raw.githubusercontent.com/Buhlean/LiaTranscriptLiveEdit/master/M
 @weird_helper
 <div style=" height: auto;  margin: 4px; ">
   <input style="display: inline-block; width: 70px; "/>
+  <input style="text" value=" " style="width: 14px;height: 14px"/>
   <input type="text" value="@2" style="width: @1px;"/>
   <label style="display: inline-block; vertical-align: bottom; 
                 margin-left: 2px; color: #444; font-size: 0.8em; ">@3</label>
@@ -34,13 +37,13 @@ import: https://raw.githubusercontent.com/Buhlean/LiaTranscriptLiveEdit/master/M
 <!-- class = "big" style = "font-size: 1.21em;" -->
 Current Project:
 <!-- class = "big" style = "font-size: 1.21em;" -->
-* [LiaTranscriptLiveEdit](#TLE)
+* [LiaTranscriptLiveEdit](#Transcript-Live-Editor)
 <!-- class = "big" style = "font-size: 1.21em;" -->
 Future Projects:
 <!-- class = "big" style = "font-size: 1.21em;" -->
-* [LiaTangle](#Interactive-Data)
-* [LiaElevatorPrompts](#Elevator-Prompts)
-## TLE
+* [Interactive Data](#Interactive-Data)
+* [Description Assembler](#Description-Assembler)
+## Transcript Live Editor
 <p style = "font-size: 1.21em;line-height:1.7;">Watch and work with videos without leaving the course<br/>
 Mobile-friendly interface<br/><br/>
 Contents:</p>
@@ -64,13 +67,14 @@ Contents:</p>
 !?[TanglePresentation](TanglePresentation.mp4)
 ### Mock-Up
 ```` 
-@EnTangle
+@makeInteractive
+@data(overhead, $100 million)
 
-Say we allocate @'input('budget', $3.0 billion') for [..]
+Say we allocate @input(budget, $3.0 billion) for [..]
 
-We estimate that this will get @'output('828,571') old cars off [..]
+We estimate that this will get @output(cars, (budget-overhead)/rebate) old cars off [..]
 
-The abatement cost is @'output('$301') per ton CO2e of federal spending, [..]
+The abatement cost is @output(dollars_per_ton, budget/tons_saved) per ton CO2e of federal spending, [..]
 ````
 <span style="font-size:1.3em;">Output:</span>
 
@@ -83,19 +87,21 @@ The abatement cost is <span style="color:#00f;">\$301</span> per ton CO2e of fed
 ### Tangle Links
 * http://worrydream.com/ClimateChange/#clunker
 * http://worrydream.com/Tangle/
-## "Elevator Prompts"
+## Description Assembler
 <p style = "font-size: 1.21em;line-height:1.7;">A LiaTemplate that aids in describing a diagram, a graph, or code<br/>
 Circumventing "blank page syndrome" and helping language learners<br/>
 Inspired by the "CV Builder"<br/>
 My plan is to implement this in Lia<br/><br/>
 Contents:</p>
 <!-- class = "big" style = "font-size: 1.21em;" -->
-* [CV Builder reference picture](#Video-Demo)
-* [mock-up graph](#Elevator-Mock-Up-1)
-* [mock-up code](#Elevator-Mock-Up-2)
+* [CV Builder reference picture](#reference)
+* [mock-up graph](#Mock-Up-1)
+* [mock-up code](#Mock-Up-2)
 ### Reference
-\*to do\*
-### Elevator Mock-Up 1
+![cv empty](https://raw.githubusercontent.com/Buhlean/LiaPresentations/master/TanglePresentation/cv_empty.PNG) <!-- style="width:50%;min-width:500px;" -->
+
+![cv filled in](https://raw.githubusercontent.com/Buhlean/LiaPresentations/master/TanglePresentation/cv_filled.PNG) <!-- style="width:50%;min-width:500px;" -->
+### Mock-Up 1
 ![warming graph](https://upload.wikimedia.org/wikipedia/commons/4/4e/NASA-GISTEMP-Hemispheres.svg) <!-- style="width:500px;border:solid grey 1px;" -->
 
 ~~Describe the graph above:~~ <!-- style="font-size:1.3em;" -->
@@ -115,7 +121,7 @@ Contents:</p>
 @big_helper( , 1000, 100, More, ~2s)
 @big_helper(Novel:, 1000, 600, Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea takimata sanctus est Lorem ipsum dolor sit amet., ~15min)
 </div>
-### Elevator Mock-Up 2
+### Mock-Up 2
 ``` C
 function(Array A)
   n = A.size
@@ -164,5 +170,9 @@ function(Array A)
 @weird_helper( , 1000, , ~0s)
 @big_helper( , 1000, 100,  , ~0s)
 </div>
+## Submission
+![xampp](http://it.komar.edu.iq/wp-content/uploads/2018/04/xampp-logo-e1523947226830.jpg)
+
+
 
 
